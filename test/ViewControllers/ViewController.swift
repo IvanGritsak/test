@@ -8,20 +8,40 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-    let nService = NetworkService()
-        
-    let mockData: [String] = (1...100).map { (i) in
-        return "Row \(i)"
-    }
+    
+    //MARK: -UI-
+    @IBOutlet weak var mainTableViewOutlet: UITableView!
+    @IBOutlet weak var mainSearchBarOutlet: UISearchBar!
+    @IBOutlet weak var activityIndicatorOutlet: UIActivityIndicatorView!
+    var offers:[(Offer, UIImage)] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
-        nService.getBanners()
+        
+        
+        mainTableViewOutlet.isHidden = true
+        activityIndicatorOutlet.startAnimating()
+        // Do any additional setup after loading the view.
+        mainSearchBarOutlet.delegate = self
+        fetchOffers()
     }
-
-
+    
+    
+    func fetchOffers() {
+        NetworkService().getOffers { [weak self] (offers, err) in
+            guard let `self` = self else {return}
+            if let err = err {
+                print("\(err.localizedDescription)")
+            }
+            
+            DispatchQueue.main.async {
+                self.offers = offers
+                self.mainTableViewOutlet.isHidden = false
+                self.activityIndicatorOutlet.stopAnimating()
+                self.mainTableViewOutlet.reloadData()
+            }
+        }
+    }
 }
 

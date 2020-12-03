@@ -9,6 +9,11 @@ import UIKit
 
 class ModalViewController: UIViewController {
 
+    
+    @IBAction func close() {
+        dismiss(animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

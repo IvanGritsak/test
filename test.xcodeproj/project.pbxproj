@@ -13,6 +13,14 @@
 		69AFF6432577888900F7B242 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69AFF6412577888900F7B242 /* Main.storyboard */; };
 		69AFF6452577888D00F7B242 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69AFF6442577888D00F7B242 /* Assets.xcassets */; };
 		69AFF6482577888D00F7B242 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69AFF6462577888D00F7B242 /* LaunchScreen.storyboard */; };
+		69AFF6562577891D00F7B242 /* ModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AFF6552577891D00F7B242 /* ModalViewController.swift */; };
+		69AFF6592577897E00F7B242 /* Banner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AFF6582577897E00F7B242 /* Banner.swift */; };
+		69AFF65C2577898500F7B242 /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AFF65B2577898500F7B242 /* Offer.swift */; };
+		69AFF65F257789AA00F7B242 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AFF65E257789AA00F7B242 /* NetworkService.swift */; };
+		69AFF66225778CC400F7B242 /* ViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AFF66125778CC400F7B242 /* ViewController+Extensions.swift */; };
+		69AFF6682577958F00F7B242 /* BannerCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AFF6672577958F00F7B242 /* BannerCollectionViewCell.swift */; };
+		69AFF66B257798E100F7B242 /* BannersTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AFF66A257798E100F7B242 /* BannersTableViewCell.swift */; };
+		69AFF66E25779C6300F7B242 /* OfferTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AFF66D25779C6300F7B242 /* OfferTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +32,14 @@
 		69AFF6442577888D00F7B242 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69AFF6472577888D00F7B242 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69AFF6492577888D00F7B242 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69AFF6552577891D00F7B242 /* ModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewController.swift; sourceTree = "<group>"; };
+		69AFF6582577897E00F7B242 /* Banner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banner.swift; sourceTree = "<group>"; };
+		69AFF65B2577898500F7B242 /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
+		69AFF65E257789AA00F7B242 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		69AFF66125778CC400F7B242 /* ViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extensions.swift"; sourceTree = "<group>"; };
+		69AFF6672577958F00F7B242 /* BannerCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerCollectionViewCell.swift; sourceTree = "<group>"; };
+		69AFF66A257798E100F7B242 /* BannersTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannersTableViewCell.swift; sourceTree = "<group>"; };
+		69AFF66D25779C6300F7B242 /* OfferTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +72,55 @@
 		69AFF63A2577888900F7B242 /* test */ = {
 			isa = PBXGroup;
 			children = (
+				69AFF6652577956800F7B242 /* Cells */,
+				69AFF653257788ED00F7B242 /* ViewControllers */,
+				69AFF6512577889D00F7B242 /* Service */,
+				69AFF6502577889800F7B242 /* Domain */,
 				69AFF63B2577888900F7B242 /* AppDelegate.swift */,
 				69AFF63D2577888900F7B242 /* SceneDelegate.swift */,
-				69AFF63F2577888900F7B242 /* ViewController.swift */,
 				69AFF6412577888900F7B242 /* Main.storyboard */,
 				69AFF6442577888D00F7B242 /* Assets.xcassets */,
 				69AFF6462577888D00F7B242 /* LaunchScreen.storyboard */,
 				69AFF6492577888D00F7B242 /* Info.plist */,
 			);
 			path = test;
+			sourceTree = "<group>";
+		};
+		69AFF6502577889800F7B242 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				69AFF6582577897E00F7B242 /* Banner.swift */,
+				69AFF65B2577898500F7B242 /* Offer.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		69AFF6512577889D00F7B242 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				69AFF65E257789AA00F7B242 /* NetworkService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		69AFF653257788ED00F7B242 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				69AFF6552577891D00F7B242 /* ModalViewController.swift */,
+				69AFF63F2577888900F7B242 /* ViewController.swift */,
+				69AFF66125778CC400F7B242 /* ViewController+Extensions.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		69AFF6652577956800F7B242 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				69AFF6672577958F00F7B242 /* BannerCollectionViewCell.swift */,
+				69AFF66A257798E100F7B242 /* BannersTableViewCell.swift */,
+				69AFF66D25779C6300F7B242 /* OfferTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +193,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69AFF6682577958F00F7B242 /* BannerCollectionViewCell.swift in Sources */,
+				69AFF65C2577898500F7B242 /* Offer.swift in Sources */,
+				69AFF66E25779C6300F7B242 /* OfferTableViewCell.swift in Sources */,
+				69AFF6562577891D00F7B242 /* ModalViewController.swift in Sources */,
 				69AFF6402577888900F7B242 /* ViewController.swift in Sources */,
+				69AFF6592577897E00F7B242 /* Banner.swift in Sources */,
+				69AFF66225778CC400F7B242 /* ViewController+Extensions.swift in Sources */,
 				69AFF63C2577888900F7B242 /* AppDelegate.swift in Sources */,
 				69AFF63E2577888900F7B242 /* SceneDelegate.swift in Sources */,
+				69AFF65F257789AA00F7B242 /* NetworkService.swift in Sources */,
+				69AFF66B257798E100F7B242 /* BannersTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +353,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4G9C5R228S;
 				INFOPLIST_FILE = test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +373,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4G9C5R228S;
 				INFOPLIST_FILE = test/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
